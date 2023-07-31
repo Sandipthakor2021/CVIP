@@ -1,0 +1,101 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInUp 1s forwards; 
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.intro {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.btn {
+    font-size: 24px;
+    padding: 15px 40px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+.btn:focus:not(:active) {
+    animation: bounce 0.5s;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007bff;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    animation: floatingHeader 3s infinite;
+}
+
+@keyframes floatingHeader {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}

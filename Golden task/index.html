@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>File Converter</h1>
+        <div class="box">
+            <label for="fileInput" class="file-upload-label">Choose File</label>
+            <input type="file" id="fileInput">
+            <div class="options-container">
+                <label for="conversionOptions">Select Conversion:</label>
+                <select id="conversionOptions">
+                    <option value="pdf">JPG to PDF</option>
+                    <option value="png">PDF to PNG</option>
+                </select>
+            </div>
+            <button onclick="convertFile()">Convert</button>
+            <div id="progressBarContainer">
+                <div id="progressBar">
+                    <div></div>
+                </div>
+                <span id="progressText">0%</span>
+            </div>
+            <div id="errorContainer"></div>
+            <a id="downloadLink" style="display: none;">Download Converted File</a>
+            <img id="previewImage" style="display: none;">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.16.0/pdf-lib.min.js"></script>
+    <script src="converter.js"></script>
+</body>
+</html>
